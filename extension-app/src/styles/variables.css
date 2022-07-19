@@ -1,0 +1,27 @@
+/* css variables */ 
+:root {
+    --text-white: hsl(0, 0%, 100%);
+    --text-light: hsl(0, 0%, 100%);
+    --text-black: hsl(0, 0%, 0%);
+    --text-dark: hsl(104, 69%, 11%);
+    --gray-light: hsl(0, 0%, 77%);
+    --gray: hsl(0, 0%, 50%);
+  }
+  .dark-text {
+    --text-light: hsl(222, 19%, 27%);
+  }
+  .light-green-text {
+    --text-light: hsl(131, 62%, 70%);
+  }
+  .red-text {
+    --text-light: hsl(347, 100%, 48%);
+  }
+  .gray-text {
+    --text-light: hsl(167, 22%, 84%);
+  }
+  .blue-text {
+    --text-light: hsl(235, 60%, 59%);
+  }
+  .light-blue-text {
+    --text-light: hsl(203, 76%, 72%);
+  }
