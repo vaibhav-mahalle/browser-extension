@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 export const getCoverImage = async (category, setImageData) => {
   try {
     const {
@@ -19,6 +18,7 @@ export const getCoverImage = async (category, setImageData) => {
     console.log(error);
   }
 };
+
 export const getWeatherUpdate = (setWeather) => {
   const success = async (pos) => {
     try {
@@ -38,11 +38,13 @@ export const getWeatherUpdate = (setWeather) => {
       console.log(error);
     }
   };
+
   const error = async (err) => {
     try {
       let coordinates = { latitude: "28.6139", longitude: "77.2090" };
       let apiURL = `https://fcc-weather-api.glitch.me/api/current?lat=${coordinates.latitude}&lon=${coordinates.longitude}`;
       let { data } = await axios.get(apiURL);
+
       setWeather({
         city: data.name,
         temp: data.main.temp + "°C",
@@ -53,8 +55,10 @@ export const getWeatherUpdate = (setWeather) => {
       console.log(error);
     }
   };
+
   navigator.geolocation.getCurrentPosition(success, error);
 };
+
 export const getRandomQuote = async (setQuote) => {
   try {
     const { data } = await axios.get("https://api.quotable.io/random");
