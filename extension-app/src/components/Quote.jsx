@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import { useSettings } from "../contexts/settings-context";
 import { getRandomQuote } from "../utils/api-requests";
 
 const Quote = () => {
-
   const [quote, setQuote] = useState({});
   const {
     settings: { quoteRefreshTime },
